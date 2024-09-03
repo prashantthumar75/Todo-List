@@ -1,0 +1,138 @@
+button {
+  border: none;
+  color: white;
+  padding:7px 17px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 10px;
+  /* background-color: #39af88; */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+}
+
+
+.edited {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #888;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.rounded {
+  border-radius: 10px;
+  background-color: #39af88;
+  
+}
+
+button.outlined {
+  background-color: transparent;
+  border: 2px solid #39af88;
+  color: #39af88;
+}
+button.pill {
+  border-radius: 50px;
+}
+
+/* General Form Styles */
+form {
+  background: white;
+  padding: 20px;
+      height: 161px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+li {
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.crossed-out {
+  text-decoration: line-through;
+}
+
+.add-todo-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #39af88;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-todo-button:hover {
+  background-color: #2d8f6f;
+}
+
