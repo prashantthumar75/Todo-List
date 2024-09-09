@@ -15,14 +15,6 @@
   margin-right: 20px;
 }
 
-.search-bar input {
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-  outline: none;
-}
 
 .filter-buttons {
   display: flex;
@@ -78,11 +70,11 @@
 
 @media (max-width: 480px) {
   .filter-buttons {
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
   }
 
   .filter-button {
-    width: 100%;
+    width: 26%;
   }
 }
