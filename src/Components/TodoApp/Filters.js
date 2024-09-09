@@ -1,5 +1,5 @@
 import React from "react";
-import "./Filters.css"; // Make sure to create this CSS file
+import "./Filters.css";
 
 const Filters = ({ filter, setFilter, searchTerm, setSearchTerm }) => {
   return (

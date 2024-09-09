@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, toggleTodo, updateTodo, setTodos } from "../../todoSlice";
-import TodoList from "./TodoList";
-import Filters from "./Filters";
-import EditModal from "./EditModal";
+import { addTodo, setTodos, toggleTodo, updateTodo } from "../../todoSlice";
 import AddTodoModal from "./AddTodoModal";
+import EditModal from "./EditModal";
+import Filters from "./Filters";
 import "./TodoApp.css";
+import TodoList from "./TodoList";
 
 const TodoApp = () => {
   const todos = useSelector((state) => state.todos);
@@ -16,11 +16,9 @@ const TodoApp = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
-  // Load todos from local storage on component mount
   useEffect(() => {
     let storedTodos = JSON.parse(localStorage.getItem("todos"));
     if (!storedTodos || storedTodos.length === 0) {
-      // If no todos in local storage, add two initial todos
       storedTodos = [
         {
           id: 1,
@@ -40,7 +38,6 @@ const TodoApp = () => {
     dispatch(setTodos(storedTodos));
   }, [dispatch]);
 
-  // Save todos to local storage whenever they change
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -99,7 +96,6 @@ const TodoApp = () => {
         todos={sortedTodos}
         onToggleTodo={handleToggleTodo}
         onEditTodo={openEditModal}
-        filter={filter}
       />
       <EditModal
         isOpen={isEditModalOpen}
@@ -112,6 +108,10 @@ const TodoApp = () => {
         onClose={() => setIsAddModalOpen(false)}
         onAddTodo={handleAddTodo}
       />
+      {/* <ThemeProvider>
+        <ThemeSwitcher/>
+        
+      </ThemeProvider> */}
     </div>
   );
 };

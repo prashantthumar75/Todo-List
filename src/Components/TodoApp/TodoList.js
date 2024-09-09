@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./TodoList.css";
 
 const TodoList = ({ todos, onToggleTodo, onEditTodo, filter }) => {
@@ -30,8 +30,8 @@ const TodoList = ({ todos, onToggleTodo, onEditTodo, filter }) => {
     };
 
     const now = audioContext.currentTime;
-    playNote(880, now, 0.15); // A5
-    playNote(1108.73, now + 0.1, 0.15); // C#6
+    playNote(880, now, 0.15); 
+    playNote(1108.73, now + 0.1, 0.15); 
   };
 
   const handleToggleTodo = (id) => {
@@ -42,16 +42,13 @@ const TodoList = ({ todos, onToggleTodo, onEditTodo, filter }) => {
     onToggleTodo(id);
   };
 
-  console.log("Current filter:", filter); // Debug: Log the current filter
-  console.log("All todos:", todos); // Debug: Log all todos
 
   const filteredTodos = todos.filter(todo => {
     if (filter === 'active') return !todo.completed;
     if (filter === 'completed') return todo.completed;
-    return true; // 'all' filter
+    return true;
   });
 
-  console.log("Filtered todos:", filteredTodos); // Debug: Log filtered todos
 
   const renderMessage = () => {
     if (filter === 'active' && filteredTodos.length === 0) {

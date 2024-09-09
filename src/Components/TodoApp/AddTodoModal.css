@@ -82,16 +82,6 @@
     margin-top: 20px;
 }
 
-/* .modal-buttons button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  width: 48%; */
-/* } */
 
 .modal-buttons button[type="submit"] {
   background-color: #39af88;
